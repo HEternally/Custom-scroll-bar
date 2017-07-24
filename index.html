@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义滚动条</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        height:100%;/*相对于浏览器窗口的高度计算*/
+    }
+        body{
+           /*background-image: url('images/bg.jpg');
+           background-repeat: no-repeat;*/
+            /*background-color: #996633;*/
+            height:100%;/*相对于父元素的宽高计算的*/
+            background:url('images/bg.jpg');
+            background-size:cover;/*设置背景尺寸，等比例缩放*/
+            background-repeat:no-repeat;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        #box{
+            position:fixed;
+            left:50px;
+            bottom:30px;
+            width:600px;
+            height:400px;
+            /*background:#996633;*/
+            border:1px solid #996600;
+            border-radius:6px;
+            overflow: hidden;
+        }
+        .content{
+                width:560px;
+                margin: 20px auto;
+        }
+        h3{
+            color:#996633;
+        }
+        .content p{
+            color:#996600;
+            font-size:12px;
+            line-height: 2em;
+            text-indent:2em;
+        }
+       .scroll{
+            position: absolute;/*绝对定位：相对于拥有定位属性的最近的父元素定位
+            如果所有的父元素都没定位属性的话，就相对于浏览器窗口定位*/
+            right:2px;
+            top:43px;
+            width:16px;
+            height:320px;
+            background:url("images/scroll_bar.png") no-repeat;
+        }
+       .bar{
+            position:absolute;
+            left:-5px;
+            top: 0px;
+            width:26px;
+            height:12px;
+            background:url("images/scroll.png") no-repeat;
+            cursor:move;/*鼠标效果，可移动*/
+        }
+    </style>
+</head>
+<body>
+    <div id="box"><!--唯一的 命名规范（见名知意：用有语义的英文单词）-->
+        <div class="content"><!--class不是唯一的-->
+            <h3>索菲亚美容简介</h3>
+            <p>在HTML中，通过各种各样的属性可以给元素增加很多附加的信息。例如，通过id属性可以将不同div元素进行区分。在CSS2中引入了一些属性选择器，而CSS3在CSS2的基础上对属性选择器进行了扩展，新增了3个属性选择器，使得属性选择器有了通配符的概念，这三个属性选择器与CSS2的属性选择器共同构成了CSS功能强大的属性选择器。如下表所示：在HTML中，通过各种各样的属性可以给元素增加很多附加的信息。例如，通过id属性可以将不同div元素进行区分。在CSS2中引入了一些属性选择器，而CSS3在CSS2的基础上对属性选择器进行了扩展，新增了3个属性选择器，使得属性选择器有了通配符的概念，这三个属性选择器与CSS2的属性选择器共同构成了CSS功能强大的属性选择器。如下表所示：</p>
+            <!--img图片四要素：src width height alt(解释说明)-->
+            <img src="images/1.jpg" width="200" hieght="140" alt="图片1">
+            <img src="images/2.jpg" width="200" hieght="140" alt="图片2">
+            <p>在HTML中，通过各种各样的属性可以给元素增加很多附加的信息。例如，通过id属性可以将不同div元素进行区分。在CSS2中引入了一些属性选择器，而CSS3在CSS2的基础上对属性选择器进行了扩展，新增了3个属性选择器，使得属性选择器有了通配符的概念，这三个属性选择器与CSS2的属性选择器共同构成了CSS功能强大的属性选择器。如下表所示：在HTML中，通过各种各样的属性可以给元素增加很多附加的信息。例如，通过id属性可以将不同div元素进行区分。在CSS2中引入了一些属性选择器，而CSS3在CSS2的基础上对属性选择器进行了扩展，新增了3个属性选择器，使得属性选择器有了通配符的概念，这三个属性选择器与CSS2的属性选择器共同构成了CSS功能强大的属性选择器。如下表所示：</p>
+            <!--img图片四要素：src width height alt(解释说明)-->
+            <img src="images/1.jpg" width="200" hieght="140" alt="图片1">
+            <img src="images/2.jpg" width="200" hieght="140" alt="图片2">
+            <p>在HTML中，通过各种各样的属性可以给元素增加很多附加的信息。例如，通过id属性可以将不同div元素进行区分。在CSS2中引入了一些属性选择器，而CSS3在CSS2的基础上对属性选择器进行了扩展，新增了3个属性选择器，使得属性选择器有了通配符的概念，这三个属性选择器与CSS2的属性选择器共同构成了CSS功能强大的属性选择器。如下表所示：在HTML中，通过各种各样的属性可以给元素增加很多附加的信息。例如，通过id属性可以将不同div元素进行区分。在CSS2中引入了一些属性选择器，而CSS3在CSS2的基础上对属性选择器进行了扩展，新增了3个属性选择器，使得属性选择器有了通配符的概念，这三个属性选择器与CSS2的属性选择器共同构成了CSS功能强大的属性选择器。如下表所示：</p>
+            <!--img图片四要素：src width height alt(解释说明)-->
+            <img src="images/1.jpg" width="200" hieght="140" alt="图片1">
+            <img src="images/2.jpg" width="200" hieght="140" alt="图片2">
+        </div>
+        <div class="scroll">
+            <div class="bar"></div>
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+    <script type="text/javascript">
+        /*
+        实现动画的思路
+            什么元素 触发 什么事件 实现 什么效果
+         */
+        var oBar = document.getElementsByClassName("bar")[0];
+        var oContent = document.getElementsByClassName("content")[0];
+        oBar.onmousedown = function(ev){
+            var ev = ev || window.event;//做浏览器的兼容处理
+            //实现什么功能：改变什么元素的什么属性
+            //获取鼠标的坐标位置
+            var y1 = ev.clientY;//获取鼠标的y坐标
+            //获取滑块原来的位置 top偏移量
+            var t = oBar.offsetTop;
+            //鼠标移动过程中
+            document.onmousemove = function(ev){
+                var ev = ev || window.event;
+                var _top = ev.clientY - y1 + t;
+                //控制_top的范围
+                if(_top < 0){
+                    _top = 0;
+                }else if(_top > 308){
+                    _top = 308;
+                }
+                //把新的坐标赋值给小滑块
+                oBar.style.top = _top + "px";
+                //比例值
+                var s = _top/308;
+                //offsetHeight获取高度
+                oContent.style.marginTop = -s*(oContent.offsetHeight - 380) + "px";
+            }
+            //鼠标抬起解绑事件
+            document.onmouseup = function(){
+                document.onmousemove = null;
+                document.onmouseup = null;
+            }
+        }
+    </script>
+</body>
+</html>
